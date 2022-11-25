@@ -42,36 +42,82 @@
 			return $query->fetch();
 		}
 		public function modelUpdate($id){
-			$name = $_POST["name"];
-			$parent_id = $_POST["parent_id"];	
-			$hienthitrangchu = isset($_POST["hienthitrangchu"])?1:0;			
+			$name = $_POST["name"];					
+			$description = $_POST["description"];
+			$content = $_POST["content"];
+			$hot = isset($_POST["hot"])?1:0;
 			//update name
 			//lay bien ket noi
 			$conn = Connection::getInstance();
 			//thuc hien truy van
-			$query = $conn->prepare("update news set name=:_name, parent_id=:_parent_id, hienthitrangchu=:_hienthitrangchu where id=:_id");
+			$query = $conn->prepare("update news set name=:_name, description=:_description,content=:_content,hot=:_hot where id=:_id");
 			//thuc thi truy van. Neu khong co tham so o cau truy van thi ghi array rong
-			$query->execute(array(":_id"=>$id,":_name"=>$name,":_parent_id"=>$parent_id, ":_hienthitrangchu"=>$hienthitrangchu));
+			$query->execute(array(":_id"=>$id,":_name"=>$name,":_description"=>$description,":_content"=>$content,":_hot"=>$hot));
+			//-------
+			//neu user upload anh
+			if($_FILES["photo"]["name"] != ""){
+				//---
+				//lay anh cu de xoa di
+				$oldImage = $conn->prepare("select photo from news where id=:_id");
+				$oldImage->execute(array(":_id"=>$id));
+				//lay mot ban ghi
+				$result = $oldImage->fetch();
+				if(isset($result->photo) && file_exists("../assets/upload/news/".$result->photo))
+					unlink("../assets/upload/news/".$result->photo);
+				//---
+				//lay anh moi de update
+				$photo = time().$_FILES["photo"]["name"];
+				//upload anh
+				move_uploaded_file($_FILES["photo"]["tmp_name"], "../assets/upload/news/$photo");
+				//update truong photo trong talble news
+				//thuc hien truy van
+				$query = $conn->prepare("update news set photo=:_photo where id=:_id");
+				//thuc thi truy van. Neu khong co tham so o cau truy van thi ghi array rong
+				$query->execute(array(":_id"=>$id,":_photo"=>$photo));
+				//---
+			}		
+			//-------
 		}
 		public function modelCreate(){
-			$name = $_POST["name"];
-			$parent_id = $_POST["parent_id"];
-			$hienthitrangchu = isset($_POST["hienthitrangchu"])?1:0;	
+			$name = $_POST["name"];					
+			$description = $_POST["description"];
+			$content = $_POST["content"];
+			$hot = isset($_POST["hot"])?1:0;
+			$photo = "";
+			//---
+			//neu user upload anh
+			if($_FILES["photo"]["name"] != ""){				
+				//lay anh moi de update
+				$photo = time().$_FILES["photo"]["name"];
+				//upload anh
+				move_uploaded_file($_FILES["photo"]["tmp_name"], "../assets/upload/news/$photo");				
+			}
+			//---
 			//update name
 			//lay bien ket noi
 			$conn = Connection::getInstance();
 			//thuc hien truy van
-			$query = $conn->prepare("insert into news set name=:_name, parent_id=:_parent_id","hienthitrangchu=:_hienthitrangchu");
+			$query = $conn->prepare("insert into news set name=:_name, description=:_description,content=:_content,hot=:_hot,photo=:_photo");
 			//thuc thi truy van. Neu khong co tham so o cau truy van thi ghi array rong
-			$query->execute(array(":_parent_id"=>$parent_id,":_name"=>$name,":_hienthitrangchu"=>$hienthitrangchu));
+			$query->execute(array(":_photo"=>$photo,":_name"=>$name,":_description"=>$description,":_content"=>$content,":_hot"=>$hot));
+			//-------			
 		}
 		public function modelDelete($id){
 			//lay bien ket noi
 			$conn = Connection::getInstance();
+			//---
+			//lay anh cu de xoa di
+			$oldImage = $conn->prepare("select photo from news where id=:_id");
+			$oldImage->execute(array(":_id"=>$id));
+			//lay mot ban ghi
+			$result = $oldImage->fetch();
+			if(isset($result->photo) && file_exists("../assets/upload/news/".$result->photo))
+				unlink("../assets/upload/news/".$result->photo);
+			//---
 			//thuc hien truy van
 			$query = $conn->prepare("delete from news where id=:_id");
 			//thuc thi truy van. Neu khong co tham so o cau truy van thi ghi array rong
-			$query->execute(array(":_id"=>$id));
-		}
+			$query->execute(array(":_id"=>$id));			
+		}		
 	}
  ?>

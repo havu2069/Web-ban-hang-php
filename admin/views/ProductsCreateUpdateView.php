@@ -52,7 +52,59 @@ $this->layoutPath = "Layout.php";
                         </select>
                     </div>
                 </div>
-                <!-- end rows -->                  
+                <!-- end rows --> 
+                <!-- rows -->
+                <div class="row" style="margin-top:5px;">
+                    <div class="col-md-2">Color</div>
+                    <div class="col-md-10">
+                        <textarea name="color" id="color">
+                            <?php echo isset($record->color)?$record->color:""; ?>
+                        </textarea>
+                        <script type="text/javascript">
+                            CKEDITOR.replace("color");
+                        </script>
+                    </div>
+                </div>
+                <!-- end rows --> 
+                <!-- rows -->
+                <div class="row" style="margin-top:5px;">
+                    <div class="col-md-2">Size</div>
+                    <div class="col-md-10">
+                        <textarea name="size" id="size">
+                            <?php echo isset($record->size)?$record->size:""; ?>
+                        </textarea>
+                        <script type="text/javascript">
+                            CKEDITOR.replace("size");
+                        </script>
+                    </div>
+                </div>
+                <!-- end rows -->    
+                <!-- rows -->
+                <div class="row" style="margin-top:5px;">
+                    <div class="col-md-2">Chất liệu</div>
+                    <div class="col-md-10">
+                        <textarea name="chatlieu" id="chatlieu">
+                            <?php echo isset($record->chatlieu)?$record->chatlieu:""; ?>
+                        </textarea>
+                        <script type="text/javascript">
+                            CKEDITOR.replace("chatlieu");
+                        </script>
+                    </div>
+                </div>
+                <!-- end rows -->   
+                <!-- rows -->
+                <div class="row" style="margin-top:5px;">
+                    <div class="col-md-2">Hướng dẫn</div>
+                    <div class="col-md-10">
+                        <textarea name="huongdan" id="huongdan">
+                            <?php echo isset($record->huongdan)?$record->huongdan:""; ?>
+                        </textarea>
+                        <script type="text/javascript">
+                            CKEDITOR.replace("huongdan");
+                        </script>
+                    </div>
+                </div>
+                <!-- end rows -->          
                 <!-- rows -->
                 <div class="row" style="margin-top:5px;">
                     <div class="col-md-2">Descripition</div>
@@ -92,6 +144,14 @@ $this->layoutPath = "Layout.php";
                     <div class="col-md-2">Upload image</div>
                     <div class="col-md-10">
                         <input type="file" name="photo">
+                    </div>
+                </div>
+                <!-- end rows -->
+                <!-- rows -->
+                <div class="row" style="margin-top:5px;">
+                    <div class="col-md-2">Upload imageSub</div>
+                    <div class="col-md-10">
+                        <input type="file" name="photosub">
                     </div>
                 </div>
                 <!-- end rows -->

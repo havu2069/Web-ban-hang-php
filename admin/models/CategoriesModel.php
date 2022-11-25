@@ -14,7 +14,7 @@
 			$from = $p * $recordPerPage;
 			//thuc hien truy van
 			$conn = Connection::getInstance();
-			$query = $conn->query("select * from categories where parent_id=0 order by id desc limit $from,$recordPerPage");
+			$query = $conn->query("select * from categories where parent_id = 0 order by id desc limit $from,$recordPerPage");
 			//lay tat ca ban ghi tra ve
 			$result = $query->fetchAll();
 			return $result;
@@ -42,26 +42,25 @@
 			return $query->fetch();
 		}
 		public function modelUpdate($id){
-			$name = $_POST["name"];
-			$parent_id = $_POST["parent_id"];	
-			$hienthitrangchu = isset($_POST["hienthitrangchu"])?1:0;			
+			$name = $_POST["name"];					
+			$parent_id = $_POST["parent_id"];
+			$hienthitrangchu = isset($_POST["hienthitrangchu"])?1:0;
 			//update name
 			//lay bien ket noi
 			$conn = Connection::getInstance();
 			//thuc hien truy van
-			$query = $conn->prepare("update categories set name=:_name, parent_id=:_parent_id, hienthitrangchu=:_hienthitrangchu where id=:_id");
+			$query = $conn->prepare("update categories set name=:_name, parent_id=:_parent_id,hienthitrangchu=:_hienthitrangchu where id=:_id");
 			//thuc thi truy van. Neu khong co tham so o cau truy van thi ghi array rong
-			$query->execute(array(":_id"=>$id,":_name"=>$name,":_parent_id"=>$parent_id, ":_hienthitrangchu"=>$hienthitrangchu));
+			$query->execute(array(":_id"=>$id,":_name"=>$name,":_parent_id"=>$parent_id,":_hienthitrangchu"=>$hienthitrangchu));			
 		}
 		public function modelCreate(){
 			$name = $_POST["name"];
-			$parent_id = $_POST["parent_id"];
-			$hienthitrangchu = isset($_POST["hienthitrangchu"])?1:0;	
-			//update name
+			$parent_id = $_POST["parent_id"];	
+			$hienthitrangchu = isset($_POST["hienthitrangchu"])?1:0;				
 			//lay bien ket noi
 			$conn = Connection::getInstance();
 			//thuc hien truy van
-			$query = $conn->prepare("insert into categories set name=:_name, parent_id=:_parent_id","hienthitrangchu=:_hienthitrangchu");
+			$query = $conn->prepare("insert into categories set name=:_name, parent_id=:_parent_id,hienthitrangchu=:_hienthitrangchu");
 			//thuc thi truy van. Neu khong co tham so o cau truy van thi ghi array rong
 			$query->execute(array(":_parent_id"=>$parent_id,":_name"=>$name,":_hienthitrangchu"=>$hienthitrangchu));
 		}
@@ -71,16 +70,16 @@
 			//thuc hien truy van
 			$query = $conn->prepare("delete from categories where id=:_id");
 			//thuc thi truy van. Neu khong co tham so o cau truy van thi ghi array rong
-			$query->execute(array(":_id"=>$id));
+			$query->execute(array(":_id"=>$id));			
 		}
 		public function modelListCategories($category_id){
 			//lay bien ket noi
 			$conn = Connection::getInstance();
 			//thuc hien truy van
-			$query = $conn->prepare("select * from categories where parent_id=0 and id<>$category_id");
+			$query = $conn->prepare("select * from categories where parent_id = 0 and id <> $category_id");
 			//thuc thi truy van. Neu khong co tham so o cau truy van thi ghi array rong
 			$query->execute();
-			//Lấy tất cả kết quả trả về
+			//lay tat ca ket qua tra ve
 			$result = $query->fetchAll();
 			return $result;
 		}
@@ -88,10 +87,10 @@
 			//lay bien ket noi
 			$conn = Connection::getInstance();
 			//thuc hien truy van
-			$query = $conn->prepare("select * from categories where parent_id=:_category_id");
+			$query = $conn->prepare("select * from categories where parent_id = :_category_id");
 			//thuc thi truy van. Neu khong co tham so o cau truy van thi ghi array rong
 			$query->execute([":_category_id"=>$category_id]);
-			//Lấy tất cả kết quả trả về
+			//lay tat ca ket qua tra ve
 			$result = $query->fetchAll();
 			return $result;
 		}

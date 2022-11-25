@@ -3,17 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Dashboard</title>
+    <title>AdminLTE</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="../assets/admin/layout1/css/bootstrap.min1.css">
+    <link rel="stylesheet" href="../assets/admin/layout1/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../assets/admin/layout1/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../assets/admin/layout1/css/AdminLTE.min1.css">
+    <link rel="stylesheet" href="../assets/admin/layout1/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="../assets/admin/layout1/css/_all-skins.min1.css">
+    <link rel="stylesheet" href="../assets/admin/layout1/css/_all-skins.min.css">
     <!-- Google Font -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -26,8 +26,10 @@
     <header class="main-header">
         <!-- Logo -->
         <a href="index2.html" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><b>A</b>LT</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>ADMIN</b></span>
+            <span class="logo-lg"><b>Admin</b>LTE</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
@@ -65,7 +67,7 @@
             </div>
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
-                <li class="header">LAYOUT ADMIN</li>
+                <li class="header">LAOYOUT ADMIN</li>
 
                 <li>
                     <a href="index.php?controller=categories&action=read">
@@ -75,6 +77,21 @@
                 <li>
                     <a href="index.php?controller=products&action=read">
                         <i class="fa fa-th"></i> <span>Sản phẩm</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.php?controller=orders">
+                        <i class="fa fa-th"></i> <span>Đơn hàng</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.php?controller=slides&action=read">
+                        <i class="fa fa-th"></i> <span>Slide</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.php?controller=products&action=read">
+                        <i class="fa fa-th"></i> <span>Adv</span>
                     </a>
                 </li>
                 <li>

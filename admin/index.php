@@ -1,30 +1,31 @@
-<?php  
-	//bắt session
+<?php 
+	//bat session
 	session_start();
 	//load file connection.php
 	include "../application/Connection.php";
-	//load file controller 
+	//load file controller
 	include "../application/Controller.php";
 	//---
-	//Lấy biến controller truyền từ url
+	//lay bien controller truyen tu url
 	$controller = isset($_GET["controller"]) ? $_GET["controller"] : "home";
-	//viết hoa ký tư đầu tiên
+	//viet hoa ky tu dau tien
 	$controller = ucfirst($controller);
-	//Gán chuỗi để biến $controller thành đường dẫn file vật lý
-	//VD: index.pp?controller=users -> controllers/UsersController.php
+	//gan chuoi de bien $controller thanh duong dan file vat ly
+	//vd: index.php?controller=users -> controllers/UsersController.php
 	$fileController = "controllers/$controller"."Controller.php";
 	//echo $fileController;
-	//Lấy biến action truyền từ url
+	//lay bien action truyen tu url
 	$action = isset($_GET["action"]) ? $_GET["action"] : "index";
-	//--
-	//kiểm tra nếu file tồn tại thì include nó
-	if (file_exists($fileController)) {
+	//---
+	//kiem tra neu file ton tai thi include no
+	if(file_exists($fileController)){
 		include $fileController;
-		//ghép chuỗi để thành tên class
+		//ghep chuoi de thanh ten class
 		$class = $controller."Controller";
-		//khởi tạo biến object của class $class
-		$obj = new $class();  // <=> $obj = new UsersController();
-		//gọi hàm bên trong class
+		//khoi tao bien object cua class $class
+		$obj = new $class();//<=> $obj = new UsersController()
+		//goi ham ben trong class
 		$obj->$action();
 	}
-?>
+	//---
+ ?>

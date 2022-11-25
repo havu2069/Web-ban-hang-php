@@ -1,14 +1,13 @@
-<?php  
-	class HomeController extends Controller
-	{
-		//Hàm tạo
+<?php 
+	class HomeController extends Controller{
+		//ham tao
 		public function __construct(){
-			//kiểm tra xem user đã đăng nhập chưa
+			//kiem tra xem user da dang nhap chua
 			$this->authentication();
 		}
 		public function index(){
 			//load view
-			$this->loadview("HomeView.php");
+			$this->loadView("HomeView.php");
 		}
 	}
-?>
+ ?>

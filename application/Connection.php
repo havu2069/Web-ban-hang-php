@@ -6,7 +6,7 @@
 		public static function getInstance(){
 			//su dung PDO de ket noi csdl mysql
 			//new PDO("chuoi ket noi csdl","username","password")
-			$connect = new PDO("mysql:host=localhost;dbname=php52_project","root","");
+			$connect = new PDO("mysql:host=localhost;dbname=mydata","root","");
 			//xac lap lay du lieu theo chuan unicode (neu khong co dong nay thi se khong hien thi duoc tieng viet)
 			$connect->exec("set names utf8");
 			//xac lap cach duyet doi tuong o tap ket qua tra ve

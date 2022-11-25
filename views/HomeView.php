@@ -48,9 +48,6 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-12 col-md-12"> <img src="assets/frontend/images/adv1.jpg" class="img-thumbnail"> </div>
-        </div>
         <?php 
         	//lay cac danh muc co hienthitrangchu=1
         	$homeCategory = $this->modelCategoryDisplayHome();
@@ -103,12 +100,7 @@
           </div>
         </div>
         <!-- /category product --> 
-        <?php endforeach; ?>
-        
-        
-        <!-- adv -->
-        <div class="widebanner"> <a href="#"><img src="assets/frontend/100/047/633/themes/517833/assets/widebanner221b.jpg?1481775169361" alt="#" class="img-responsive"></a> </div>
-        <!-- end adv --> 
+        <?php endforeach; ?> 
         
         <!-- hot news -->
         <div class="home-blog">
@@ -123,7 +115,7 @@
               <div class="item">
                 <div class="article"> <a href="index.php?controller=news&action=detail&id=<?php echo $rows->id; ?>" class="image"> <img src="assets/upload/news/<?php echo $rows->photo; ?>" alt="<?php echo $rows->name; ?>" title="<?php echo $rows->name; ?>" class="img-responsive"> </a>
                   <div class="info">
-                    <h3><a class="text3line" href="#" style="font-weight: bold;"><?php echo $rows->name; ?></a></h3>
+                    <h3><a class="text3line" href="index.php?controller=news&action=detail&id=<?php echo $rows->id; ?>" style="font-weight: bold;"><?php echo $rows->name; ?></a></h3>
                     <p class="desc"> <?php echo $rows->description; ?></p>
                   </div>
                 </div>

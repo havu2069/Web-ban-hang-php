@@ -10,7 +10,7 @@
 <meta name="robots" content="noodp,index,follow" />
 <meta name='revisit-after' content='1 days' />
 <meta name="keywords" content="">
-<title>DKT Store</title>
+<title>NGỌC QUỲNH</title>
 <link href='assets/frontend/100/047/633/themes/517833/assets/font-awesome.min221b.css?1481775169361' rel='stylesheet' type='text/css' />
 <link href='assets/frontend/100/047/633/themes/517833/assets/bootstrap.min221b.css?1481775169361' rel='stylesheet' type='text/css' />
 <link href='assets/frontend/100/047/633/themes/517833/assets/owl.carousel221b.css?1481775169361' rel='stylesheet' type='text/css' />
@@ -20,9 +20,23 @@
 <script src='assets/frontend/100/047/633/themes/517833/assets/bootstrap.min221b.js?1481775169361' type='text/javascript'></script>
 <script src='assets/frontend/assets/themes_support/api.jquerya87f.js?4' type='text/javascript'></script>
 <link href='assets/frontend/100/047/633/themes/517833/assets/bw-statistics-style221b.css?1481775169361' rel='stylesheet' type='text/css' />
+
 </head>
 <body class="index">
 <!-- header -->
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6004051dc31c9117cb6f6c3e/1es7r7vsk';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 <?php 
     //load MVC bang tay
     //include file controller cua MVC
@@ -35,7 +49,7 @@
 <!-- end header -->
 <div class="content">
   <div class="container">
-    <h1 style="display:none;">DKT Store</h1>
+    <h1 style="display:none;">DELISA</h1>
     <div class="row">
       <div class="col-xs-12 col-md-3"> 
         <!-- end support -->
@@ -71,7 +85,7 @@
                 <input type="number" min="0" value="0" id="toPrice" class="form-control"/>
               </li>
               <li class="list-group-item" style="border:0px; text-align:center">
-                <input type="button" class="btn btn-warning" value="Tìm mức giá" onclick="location.href = '/Product/Search?fromPrice=' + document.getElementById('fromPrice').value + '&toPrice=' + document.getElementById('toPrice').value;" />
+                <input type="button" class="btn btn-warning" value="Tìm mức giá" onclick="location.href = 'index.php?controller=search&action=searchPrice&fromPrice=' + document.getElementById('fromPrice').value + '&toPrice=' + document.getElementById('toPrice').value;" />
               </li>
             </ul>
           </div>
@@ -85,11 +99,11 @@
             <div class="owl-home-blog owl-home-blog-sidebar"> 
               <!-- list hot news -->
               <div class="item">
-                <div class="article"> <a href="index.php?controller=news_detail&id=20" class="image"> <img src="assets/frontend/images/chicago.jpg" alt="Mua iPhone 6s và iPhone 6s Plus chính hãng ở đâu?" title="Mua iPhone 6s và iPhone 6s Plus chính hãng ở đâu?" class="img-responsive"> </a>
+                <div class="article"> <a href="index.php?controller=news_detail&id=20" class="image"> <img src="assets/frontend/images/blazer.jpg" class="img-responsive"> </a>
                   <div class="info">
-                    <h3><a href="index.php?controller=news_detail&id=20">Mua iPhone 6s và iPhone 6s Plus chính hãng ở đâu?</a></h3>
+                    <h3><a href="index.php?controller=news_detail&id=20">Tủ đồ thu đông mà vắng những mẫu áo blazer thì các nàng thật thiếu sót quá</a></h3>
                     <p class="desc">
-                    <p>X-37B c&oacute; thể triển khai như vũ kh&iacute; ti&ecirc;u diệt vệ tinh của đối phương, hoặc thả vũ kh&iacute; động năng đến bất kỳ vị tr&iacute; n&agrave;o tr&ecirc;n Tr&aacute;i Đất.</p>
+                    <p>Áo blazer là một items vô cùng thời thượng và rất tiện dụng trong mọi hoàn cảnh với mọi tín đồ thời trang. Thu Đông năm nay, chiếc áo khoác này tiếp tục trở thành trang phục không thể thiếu trong tủ đồ của phái đẹp, đặc biệt là các quý cô công sở.</p>
                     </p>
                   </div>
                 </div>
@@ -97,11 +111,11 @@
               <!-- end list hot news --> 
               <!-- list hot news -->
               <div class="item">
-                <div class="article"> <a href="index.php?controller=news_detail&id=19" class="image"> <img src="assets/frontend/images/chicago.jpg" alt="Mua iPhone 6s và iPhone 6s Plus chính hãng ở đâu?" title="Mua iPhone 6s và iPhone 6s Plus chính hãng ở đâu?" class="img-responsive"> </a>
+                <div class="article"> <a href="index.php?controller=news_detail&id=19" class="image"> <img src="assets/frontend/images/tt2.jpg"  class="img-responsive"> </a>
                   <div class="info">
-                    <h3><a href="index.php?controller=news_detail&id=19">Mẹo in văn bản từ iPhone, iPad không phải ai cũng biết</a></h3>
+                    <h3><a href="index.php?controller=news_detail&id=19">Mau chào đón Nữ Hoàng của chúng ta đi, nào các cô gái lười biếng mà vẫn muốn mặc đẹp!</a></h3>
                     <p class="desc">
-                    <p>(D&acirc;n tr&iacute;) - Nếu bạn l&agrave; mẫu người th&iacute;ch sử dụng iPhone hoặc iPad để l&agrave;m việc, ắt hẳn ch&uacute;ng ta từng c&oacute; lần muốn in văn bản hoặc t&agrave;i liệu trực tiếp từ thiết bị.</p>
+                    <p>Cô gái xứ Kim Chi đã tìm ra chiêu để mặc đẹp mà không mất nhiều thời gian, cũng chẳng tốn nhiều tiền...</p>
                     </p>
                   </div>
                 </div>
@@ -109,11 +123,11 @@
               <!-- end list hot news --> 
               <!-- list hot news -->
               <div class="item">
-                <div class="article"> <a href="index.php?controller=news_detail&id=17" class="image"> <img src="assets/frontend/images/chicago.jpg" alt="Mua iPhone 6s và iPhone 6s Plus chính hãng ở đâu?" title="Mua iPhone 6s và iPhone 6s Plus chính hãng ở đâu?" class="img-responsive"> </a>
+                <div class="article"> <a href="index.php?controller=news_detail&id=17" class="image"> <img src="assets/frontend/images/tt1.jpg"  class="img-responsive"> </a>
                   <div class="info">
-                    <h3><a href="index.php?controller=news_detail&id=17">Samsung và Oppo tiếp tục thống trị thị trường đầu năm 2017 tại Việt Nam</a></h3>
+                    <h3><a href="index.php?controller=news_detail&id=17">Bỏ túi 4 tips mix & match váy áo này, nàng tha hồ diện đẹp ngày Tết</a></h3>
                     <p class="desc">
-                    <p>(D&acirc;n tr&iacute;) - Hầu hết c&aacute;c sản phẩm nằm trong top 10 b&aacute;n chạy th&aacute;ng 2 v&agrave; nửa đầu th&aacute;ng 3 năm 2017 của c&aacute;c nh&agrave; b&aacute;n lẻ đều đến từ Samsung v&agrave; Oppo. C&aacute;c thương hiệu lớn kh&aacute;c dần dần bị thụt l&ugrave;i về sau...</p>
+                    <p>Những ngày sắp Tết thì đối với hội chị em, câu hỏi “Xuân này diện gì?” lại trở thành một vấn đề khiến các nàng băn khoăn và lo lắng. “Giáo trình” lên đồ ngày Tết đến đây, nàng lưu nhanh để các hôm đầu năm còn áp dụng nhé. Bỏ túi liền 4 tips mix đồ sang - xịn mà giá bao hợp lý, Tết nay nàng đẹp “thừa" luôn!</p>
                     </p>
                   </div>
                 </div>
@@ -121,11 +135,11 @@
               <!-- end list hot news --> 
               <!-- list hot news -->
               <div class="item">
-                <div class="article"> <a href="index.php?controller=news_detail&id=16" class="image"> <img src="assets/frontend/images/chicago.jpg" alt="Mua iPhone 6s và iPhone 6s Plus chính hãng ở đâu?" title="Mua iPhone 6s và iPhone 6s Plus chính hãng ở đâu?" class="img-responsive"> </a>
+                <div class="article"> <a href="index.php?controller=news_detail&id=16" class="image"> <img src="assets/frontend/images/tt3.jpg" class="img-responsive"> </a>
                   <div class="info">
-                    <h3><a href="index.php?controller=news_detail&id=16">Những dấu hiệu cho thấy chiếc tủ lạnh nhà bạn đang gặp vấn đề</a></h3>
+                    <h3><a href="index.php?controller=news_detail&id=16">Tại sao thương hiệu giày dép Trung Hương Store lại đông đảo giới trẻ ưa chuộng?</a></h3>
                     <p class="desc">
-                    <p>(D&acirc;n tr&iacute;) - Mặc d&ugrave; l&agrave; một thiết bị điện tử với độ bền cao, thậm ch&iacute; c&oacute; thể l&ecirc;n tới 10-20 năm, nhưng điều đ&oacute; kh&ocirc;ng c&oacute; nghĩa l&agrave; tủ lạnh kh&ocirc;ng thể hỏng h&oacute;c hay gặp sự cố.</p>
+                    <p>Tại Việt Nam, vẫn có rất nhiều người yêu thích đồ đẹp tuy nhiên giá cả phải phù hợp với túi tiền. Chính vì vậy Trung Hương Store là một lựa chọn phù hợp cho nhu cầu đó của bạn trẻ.</p>
                     </p>
                   </div>
                 </div>
@@ -133,11 +147,11 @@
               <!-- end list hot news --> 
               <!-- list hot news -->
               <div class="item">
-                <div class="article"> <a href="index.php?controller=news_detail&id=15" class="image"> <img src="assets/frontend/images/chicago.jpg" alt="Mua iPhone 6s và iPhone 6s Plus chính hãng ở đâu?" title="Mua iPhone 6s và iPhone 6s Plus chính hãng ở đâu?" class="img-responsive"> </a>
+                <div class="article"> <a href="index.php?controller=news_detail&id=15" class="image"> <img src="assets/frontend/images/tt4.jpg" class="img-responsive"> </a>
                   <div class="info">
-                    <h3><a href="index.php?controller=news_detail&id=15">Oppo khởi chạy chương trình đặt hàng trước F3 Plus tại Việt Nam</a></h3>
+                    <h3><a href="index.php?controller=news_detail&id=15">Giảm ngay 40% cho khách hàng có ngày sinh trong tháng khi mua sản phẩm thời trang Paltal</a></h3>
                     <p class="desc">
-                    <p>Sau ng&agrave;y ra mắt ch&iacute;nh thức v&agrave;o 23/3 tới, Oppo sẽ tiến h&agrave;nh chương tr&igrave;nh đặt h&agrave;ng trước F3 Plus từ ng&agrave;y 24/3 đến hết ng&agrave;y 31/3/2017, kh&aacute;ch h&agrave;ng đặt mua trước sản phẩm F3 Plus sẽ nhận được bộ qu&agrave; tặng d&agrave;nh hấp dẫn.</p>
+                    <p>Với mức giảm lên đến 40%++ các combo sản phẩm ưu đãi, chương trình “Tri Ân Tháng Sinh Nhật Khách Hàng – Ngập Tràn Ưu Đãi” thay cho lời tri ân đến các chị em có sinh nhật trong tháng vì đã tin dùng sản phẩm thời trang Paltal trong hơn 20 năm qua.</p>
                     </p>
                   </div>
                 </div>
@@ -147,9 +161,6 @@
           </div>
         </div>
         <!-- end hot news --> 
-        <!-- adv --> 
-        <img src="assets/frontend/images/banner03d5.jpg"> 
-        <!-- end adv --> 
         
       </div>
       <div class="col-xs-12 col-md-9"> 
@@ -159,18 +170,12 @@
         
         <!-- end main --> 
       </div>
-    </div>
-    <!-- adv -->
-    <div class="widebanner"> <a href="#"><img src="assets/frontend/100/047/633/themes/517833/assets/widebanner221b.jpg?1481775169361" alt="#" class="img-responsive"></a> </div>
-    <!-- end adv --> 
-    
-  </div>
-</div>
+    </div></div>
 <div class="privacy">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-4">
-        <div class="image"> <img src="assets/frontend/100/047/633/themes/517833/assets/ico-service-1221b.png?1481775169361" alt="Giao hàng miễn phí" title="Giao hàng miễn phí" class="img-responsive"> </div>
+        <div class="image"> <img src="assets/frontend/100/047/633/themes/517833/assets/ico-service-1221b.png?1481775169361" alt="Giao hàng miễn phí" title="Giao hàng miễn phí" class="img-responsive" > </div>
         <div class="info">
           <h3>Giao hàng miễn phí</h3>
           <p>Miễn phí giao hàng trong nội thành Hà Nội</p>
@@ -199,11 +204,11 @@
       <div class="row">
         <div class="col-xs-12 col-sm-3">
           <h3>Về chúng tôi</h3>
+          <p>Dalisa chính thức cung cấp thời trang cao cấp, hứa hẹn sẽ đem đến cho bạn những sản phẩm ưu việt nhất!</p>
           <ul class="list-unstyled">
-            <li><a href="index.html">Trang chủ</a></li>
-            <li><a href="gioi-thieu">Giới thiệu</a></li>
-            <li><a href="tin-tuc">Tin tức</a></li>
-            <li><a href="gioi-thieu">Liên hệ</a></li>
+            <li>Điện thoại: 1900.57.57</li>
+            <li>Email: thoitrangdelisa@gmail.com</li>
+            <li>Website: www.delisa.vn</li>
           </ul>
         </div>
         <div class="col-xs-12 col-sm-3">
@@ -237,20 +242,7 @@
       <div class="payments-method"> <img src="assets/frontend/100/047/633/themes/517833/assets/payments-method221b.png?1481775169361" alt="Phương thức thanh toán" title="Phương thức thanh toán"> </div>
     </div>
   </div>
-  <div class="bottom-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-5"> © Bản quyền DKT Store</div>
-        <div class="col-xs-12 col-sm-7">
-          <ul class="list-unstyled">
-            <li><a href="#">Trang chủ</a></li>
-            <li><a href="#">Giới thiệu</a></li>
-            <li><a href="#">Tin tức</a></li>
-            <li><a href="#">Liên hệ</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+
   </div>
 </footer>
 <script src='assets/frontend/100/047/633/themes/517833/assets/owl.carousel.min221b.js?1481775169361' type='text/javascript'></script> 

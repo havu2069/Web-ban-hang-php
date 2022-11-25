@@ -23,5 +23,18 @@
 			$result = $query->fetchAll();
 			return $result;
 		}
+		//kiem tra xem danh muc cha co cap con khong
+		public function modelCheckCategorySub($category_id){
+			//lay bien ket noi
+			$conn = Connection::getInstance();
+			//thuc hien truy van
+			$query = $conn->prepare("select id from categories where parent_id = :_category_id");
+			//thuc thi truy van. Neu khong co tham so o cau truy van thi ghi array rong
+			$query->execute([":_category_id"=>$category_id]);
+			//lay tat ca ket qua tra ve
+			if($query->rowCount() > 0)
+				return true;
+			return false;
+		}
 	}
  ?>
